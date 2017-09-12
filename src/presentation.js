@@ -72,8 +72,6 @@ export default class Presentation extends Component {
               You have to discern what users say and actually do. Selectively
               ignore users.
             </ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
           </List>
         </Slide>
         {/* Speed */}
