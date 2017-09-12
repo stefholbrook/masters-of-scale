@@ -1,6 +1,8 @@
 // Import React
 import React, { Component } from "react"
 
+// import Intro from './slides/intro'
+
 // Import Spectacle Core tags
 import {
   BlockQuote,
@@ -22,12 +24,13 @@ require("normalize.css")
 require("spectacle/lib/themes/default/index.css")
 
 const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  primary: "#dddddd",
+  secondary: "#fe9f97",
+  tertiary: "#0095a3",
+  quartenary: "#fbae17",
+  text: "#0f0a01"
 }, {
-  primary: "Montserrat",
+  primary: "Roboto",
   secondary: "Helvetica"
 })
 
@@ -35,36 +38,68 @@ export default class Presentation extends Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+        {/* Intro */}
+        <Slide transition={["fade"]} bgColor="primary">
+          <BlockQuote>
+            <Quote textColor="text">
+              If you're not embarassed by your first product release, you've
+              released too late
+            </Quote>
+            <Cite textColor="secondary">Reid Hoffman</Cite>
+          </BlockQuote>
+        </Slide>
+        {/* Tight feedback loop */}
+        <Slide transition={["fade"]} bgColor="primary">
+          <BlockQuote>
+            <Quote textColor="text">
+              I didn't know it would be us
+            </Quote>
+            <Cite textColor="secondary">Mark Zuckerberg</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Text size={6} caps>release &#x2192; observe &#x2192; react</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={6} textColor="tertiary" caps>
+            Your assumptions about what people want are never exactly right
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
+          <List textColor="text">
+            <ListItem>
+              Create a tight feedback loop with real customers, using a real product
+            </ListItem>
+            <ListItem>
+              You have to discern what users say and actually do. Selectively
+              ignore users.
+            </ListItem>
             <ListItem>Item 3</ListItem>
             <ListItem>Item 4</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+        {/* Speed */}
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={6} textColor="tertiary" caps>
+            Don't fear imperfections. They won't make or break your company.
+            <i> Speed</i> will make or break your company.
+          </Heading>
+          <List textColor="text">
+            <ListItem>Move fast and break things</ListItem>
+            <ListItem>Move fast with stable infrastructure</ListItem>
+            <ListItem>
+              "Is this going to destroy the company? If not, let them test it."
+            </ListItem>
+            <ListItem>Item 4</ListItem>
+          </List>
+        </Slide>
+        {/* Outro */}
+        <Slide transition={["fade"]} bgColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote textColor="text">
+              The most innovative products should be a perpetual cause of
+              embarassment. Embarassment - Not permission to cut corners, or act recklessly, or
+              proceed without a clear plan.
+            </Quote>
+            <Cite textColor="tertiary">Reid Hoffman</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
