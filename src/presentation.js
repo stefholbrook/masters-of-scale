@@ -85,10 +85,10 @@ export default class Presentation extends Component {
           <List textColor="text">
             <ListItem>Move fast and break things</ListItem>
             <ListItem>Move fast with stable infrastructure</ListItem>
+            <ListItem>What are you willing to give up?</ListItem>
             <ListItem>
               "Is this going to destroy the company? If not, let them test it."
             </ListItem>
-            <ListItem>Item 4</ListItem>
           </List>
         </Slide>
         {/* Outro */}
@@ -101,6 +101,15 @@ export default class Presentation extends Component {
             </Quote>
             <Cite textColor="tertiary">Reid Hoffman</Cite>
           </BlockQuote>
+        </Slide>
+        {/* Discussion */}
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={6} textColor="tertiary" caps>Discussion</Heading>
+          <List textColor="text">
+            <ListItem>How can we improve our feedback loop?</ListItem>
+            <ListItem>Move fast and break things or infrastructure?</ListItem>
+            <ListItem>Thoughts?</ListItem>
+          </List>
         </Slide>
       </Deck>
     )
