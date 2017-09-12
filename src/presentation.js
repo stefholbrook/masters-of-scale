@@ -50,14 +50,6 @@ export default class Presentation extends Component {
         </Slide>
         {/* Tight feedback loop */}
         <Slide transition={["fade"]} bgColor="primary">
-          <BlockQuote>
-            <Quote textColor="text">
-              I didn't know it would be us
-            </Quote>
-            <Cite textColor="secondary">Mark Zuckerberg</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary">
           <Text size={6} caps>release &#x2192; observe &#x2192; react</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
@@ -93,11 +85,9 @@ export default class Presentation extends Component {
         <Slide transition={["fade"]} bgColor="primary">
           <BlockQuote>
             <Quote textColor="text">
-              The most innovative products should be a perpetual cause of
-              embarassment. Embarassment - Not permission to cut corners, or act recklessly, or
-              proceed without a clear plan.
+              I didn't know it would be us
             </Quote>
-            <Cite textColor="tertiary">Reid Hoffman</Cite>
+            <Cite textColor="secondary">Mark Zuckerberg</Cite>
           </BlockQuote>
         </Slide>
         {/* Discussion */}
@@ -108,6 +98,9 @@ export default class Presentation extends Component {
             <ListItem>Move fast and break things or infrastructure?</ListItem>
             <ListItem>Thoughts?</ListItem>
           </List>
+        </Slide>
+        <Slide>
+          <img alt='nacho' src='https://media.giphy.com/media/10MG0J9z19Sjjq/giphy.gif' />
         </Slide>
       </Deck>
     )
